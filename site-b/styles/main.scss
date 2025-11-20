@@ -1,0 +1,85 @@
+// Site B specific styles
+@import '@shared-styles/common.scss';
+
+// Site B custom theme
+$site-b-primary: #059669; // Green theme for Site B
+$site-b-accent: #10b981;
+
+body {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-large;
+}
+
+.header {
+  background: $site-b-primary;
+  color: white;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  
+  h1, p {
+    color: white;
+  }
+}
+
+.button {
+  background-color: $site-b-primary;
+  
+  &:hover {
+    background-color: $site-b-accent;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    color: $site-b-primary;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+      padding: $spacing-small 0;
+      padding-left: $spacing-medium;
+      position: relative;
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: $site-b-primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.demo-output {
+  margin-top: $spacing-medium;
+  padding: $spacing-small;
+  background: lighten($site-b-primary, 55%);
+  border-left: 3px solid $site-b-primary;
+  border-radius: 4px;
+  font-weight: 500;
+  min-height: 20px;
+}
+
+.footer {
+  background: lighten($site-b-primary, 55%);
+  padding: $spacing-medium 0;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  
+  p {
+    margin: $spacing-small 0;
+  }
+}

@@ -1,0 +1,84 @@
+// Site A specific styles
+@import '@shared-styles/common.scss';
+
+// Site A custom theme
+$site-a-primary: #2563eb; // Blue theme for Site A
+$site-a-accent: #3b82f6;
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-large;
+}
+
+.header {
+  background: $site-a-primary;
+  color: white;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  
+  h1, p {
+    color: white;
+  }
+}
+
+.button {
+  background-color: $site-a-primary;
+  
+  &:hover {
+    background-color: $site-a-accent;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    color: $site-a-primary;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+      padding: $spacing-small 0;
+      padding-left: $spacing-medium;
+      position: relative;
+      
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $site-a-primary;
+      }
+    }
+  }
+}
+
+.demo-output {
+  margin-top: $spacing-medium;
+  padding: $spacing-small;
+  background: lighten($site-a-primary, 45%);
+  border-left: 3px solid $site-a-primary;
+  border-radius: 4px;
+  font-weight: 500;
+  min-height: 20px;
+}
+
+.footer {
+  background: lighten($site-a-primary, 45%);
+  padding: $spacing-medium 0;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  
+  p {
+    margin: $spacing-small 0;
+  }
+}

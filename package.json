@@ -1,0 +1,28 @@
+{
+  "name": "vite-single-project-multi-sites",
+  "version": "1.0.0",
+  "description": "A single Vite.js project with multiple sites (site-a and site-b) sharing resources",
+  "type": "module",
+  "scripts": {
+    "dev:site-a": "vite --config vite.config.site-a.js",
+    "dev:site-b": "vite --config vite.config.site-b.js",
+    "build:site-a": "vite build --config vite.config.site-a.js",
+    "build:site-b": "vite build --config vite.config.site-b.js",
+    "build:all": "npm run build:site-a && npm run build:site-b",
+    "preview:site-a": "vite preview --config vite.config.site-a.js",
+    "preview:site-b": "vite preview --config vite.config.site-b.js"
+  },
+  "keywords": [
+    "vite",
+    "multi-site",
+    "handlebars"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-handlebars": "^2.0.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.3.0"
+  }
+}
