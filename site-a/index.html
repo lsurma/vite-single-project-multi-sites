@@ -23,6 +23,14 @@
           </p>
         </div>
 
+        {{#if (eq siteName "Site A")}}
+        <div class="card">
+          <h2>Conditional Content</h2>
+          <p>✅ This content only appears on Site A because siteName equals "Site A"</p>
+          <p>This demonstrates the conditional helper syntax for comparisons.</p>
+        </div>
+        {{/if}}
+
         <div class="card">
           <h2>Site A Features</h2>
           <ul>
@@ -30,6 +38,9 @@
             <li>Shared header and footer partials</li>
             <li>Shared TypeScript utilities</li>
             <li>Shared SCSS variables and mixins</li>
+            {{#if (eq siteName "Site A")}}
+            <li>✨ Conditional rendering with Handlebars helpers</li>
+            {{/if}}
           </ul>
         </div>
 

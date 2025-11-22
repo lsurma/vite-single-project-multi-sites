@@ -2,6 +2,7 @@ import { defineConfig, mergeConfig } from 'vite';
 import { resolve } from 'path';
 import { baseConfig } from './vite.config.base.js';
 import handlebars from 'vite-plugin-handlebars';
+import { handlebarsHelpers } from './handlebars-helpers.js';
 
 /**
  * Site-B specific Vite configuration
@@ -29,6 +30,7 @@ export default defineConfig(
           siteName: 'Site B',
           siteDescription: 'This is Site B with shared resources',
         },
+        helpers: handlebarsHelpers,
       }),
     ],
   })
