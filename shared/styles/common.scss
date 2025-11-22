@@ -1,0 +1,89 @@
+// Shared styles that can be imported by site-specific styles
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Shared components
+.container {
+  max-width: $breakpoint-wide;
+  margin: 0 auto;
+  padding: 0 $spacing-medium;
+}
+
+.header {
+  padding: $spacing-large 0;
+  border-bottom: 1px solid $border-color;
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: $spacing-small;
+  }
+  
+  p {
+    color: lighten($text-color, 20%);
+  }
+}
+
+.content {
+  padding: $spacing-large 0;
+}
+
+.card {
+  background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: $spacing-medium;
+  margin-bottom: $spacing-medium;
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-small;
+  }
+  
+  p {
+    margin-bottom: $spacing-small;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: $spacing-small $spacing-medium;
+  background-color: $primary-color;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Responsive utilities
+@media (max-width: $breakpoint-tablet) {
+  .container {
+    padding: 0 $spacing-small;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}

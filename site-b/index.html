@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{siteName}}</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+  </head>
+  <body>
+    {{> header}}
+
+    <main class="content">
+      <div class="container">
+        <div class="card">
+          <h2>Welcome to Site B</h2>
+          <p>
+            This is Site B, demonstrating a multi-site Vite configuration with
+            shared resources.
+          </p>
+          <p>
+            This site uses the same shared Handlebars partials, SCSS variables,
+            and TypeScript utilities as Site A, but with a different theme.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Site B Features</h2>
+          <ul>
+            <li>Custom green theme</li>
+            <li>Shared header and footer partials</li>
+            <li>Shared TypeScript utilities</li>
+            <li>Shared SCSS variables and mixins</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Interactive Elements</h2>
+          <button class="button demo-button">Click Me (Site B)</button>
+          <p class="demo-output"></p>
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="./scripts/main.ts"></script>
+  </body>
+</html>
