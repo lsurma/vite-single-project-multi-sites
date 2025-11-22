@@ -2,5 +2,11 @@
   <div class="container">
     <h1>{{siteName}}</h1>
     <p>{{siteDescription}}</p>
+    {{#if (eq siteName "Site A")}}
+    <p class="site-badge">🔵 This is Site A</p>
+    {{/if}}
+    {{#if (eq siteName "Site B")}}
+    <p class="site-badge">🟢 This is Site B</p>
+    {{/if}}
   </div>
 </header>

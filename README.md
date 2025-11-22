@@ -182,6 +182,55 @@ Use shared partials in Handlebars templates:
 {{> footer}}
 ```
 
+### Handlebars Conditional Statements
+
+The project supports Handlebars conditional statements using custom helpers for comparisons:
+
+#### Available Comparison Helpers
+
+- `eq` - Equal (===)
+- `ne` - Not equal (!==)
+- `lt` - Less than (<)
+- `gt` - Greater than (>)
+- `lte` - Less than or equal (<=)
+- `gte` - Greater than or equal (>=)
+- `and` - Logical AND (&&)
+- `or` - Logical OR (||)
+- `not` - Logical NOT (!)
+
+#### Example Usage
+
+```handlebars
+<!-- Simple equality check -->
+{{#if (eq siteName "Site A")}}
+  <p>This content only appears on Site A</p>
+{{/if}}
+
+<!-- Not equal check -->
+{{#if (ne siteName "Site B")}}
+  <p>This content appears on all sites except Site B</p>
+{{/if}}
+
+<!-- Numeric comparisons -->
+{{#if (gt userAge 18)}}
+  <p>User is an adult</p>
+{{/if}}
+
+<!-- Logical operators -->
+{{#if (and isLoggedIn hasPermission)}}
+  <p>User has access</p>
+{{/if}}
+
+<!-- With else clause -->
+{{#if (eq siteName "Site A")}}
+  <p>Welcome to Site A</p>
+{{else}}
+  <p>Welcome to another site</p>
+{{/if}}
+```
+
+See the `site-a/index.html`, `site-b/index.html`, and `shared/partials/header.hbs` files for working examples.
+
 ## Technologies
 
 - **Vite**: Fast build tool and dev server
