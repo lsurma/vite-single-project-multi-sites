@@ -2,6 +2,7 @@ import { defineConfig, mergeConfig } from 'vite';
 import { resolve } from 'path';
 import { baseConfig } from './vite.config.base.js';
 import handlebars from 'vite-plugin-handlebars';
+import { handlebarsHelpers } from './handlebars-helpers.js';
 
 /**
  * Site-B specific Vite configuration
@@ -29,18 +30,7 @@ export default defineConfig(
           siteName: 'Site B',
           siteDescription: 'This is Site B with shared resources',
         },
-        helpers: {
-          // Comparison helpers
-          eq: (a, b) => a === b,
-          ne: (a, b) => a !== b,
-          lt: (a, b) => a < b,
-          gt: (a, b) => a > b,
-          lte: (a, b) => a <= b,
-          gte: (a, b) => a >= b,
-          and: (a, b) => a && b,
-          or: (a, b) => a || b,
-          not: (a) => !a,
-        },
+        helpers: handlebarsHelpers,
       }),
     ],
   })
